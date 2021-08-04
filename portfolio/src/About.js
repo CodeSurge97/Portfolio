@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import styled from 'styled-components'
+import ArrowDownward from '@material-ui/icons/ArrowDropDown'
 
-function About(){
+function About({setFace}){
 
 
 
     return(
-        <Container>
+        <Section>
+            <Container>
                 <Header>
                     <Title>
                         About Me
@@ -24,18 +26,29 @@ function About(){
                         </Text>
                     </Bio>
                 </Summary>
-        </Container>
+                <Icon onClick={() => {setFace('front')}}>
+                    <ArrowDownward/>
+                </Icon>
+            </Container>
+        </Section>
+        
     )
 }
 export default About;
 
-const Container = styled.div`
-    background-color: violet;
-    display: block;
-    height: 448px;
+const Section = styled.section`
+    background-color: rgb(47, 47, 47);
     color: white;
-    width: 100%;
-    height: 500px;
+    border-bottom: 1px solid gray;
+`
+
+const Container = styled.div`
+    display: block;
+    height: 100%;
+    color: white;
+    max-width: 1320px;
+    margin-right: auto;
+    margin-left: auto;
     position: relative; 
     padding: 20px;
 `
@@ -56,4 +69,10 @@ const Bio = styled.div`
 `
 const Text = styled.p`
 
+`
+const Icon = styled.div`
+    position: absolute;
+    top: 200px;
+    left: 500px;
+    cursor: pointer;
 `

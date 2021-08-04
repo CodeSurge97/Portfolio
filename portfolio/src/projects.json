@@ -3,25 +3,25 @@
         "title" : "Geektext Bookstore",
         "description": "A single page application that allows users to browse through a catalogue of books. Users can also create an account and manage their personal information.",
         "links":["https://github.com/CodeSurge97/GeekText","https://geektext00.web.app/books"],
-        "image":"https://res.cloudinary.com/ssurge/image/upload/v1627959694/geetext2_ocbuba.png"
+        "image":"https://res.cloudinary.com/ssurge/image/upload/v1628033009/geek0_sndxti.png"
     },
     {
         "title" : "Data Science Workflow Manager",
         "description": "Collaborated with team members, FIU Air Lab and Farelogix to create a data science application that tackles model integration and customized web-based visualization to allow end-users to explore model generated data interactively.",
         "links":["https://github.com/CodeSurge97/Data-Science-Workflow-Manager/tree/master/Code","https://airlab.fiu.edu/data-science-workflow-manager-dswm/"],
-        "image":""
+        "image":"https://res.cloudinary.com/ssurge/image/upload/v1628031561/dswm0_rzo67c.png"
     },
     {
         "title" : "Streaming App",
         "description": "A web application design to function like Netflix. Users can browse tv shows and movies, and toggle trailers for the movies",
         "links":["https://github.com/CodeSurge97/Netflix-Clone","https://codesurge97.github.io/Netflix-Clone/"],
-        "image":""
+        "image":"https://res.cloudinary.com/ssurge/image/upload/v1628036605/netflix0_vagiux.png"
     },
     {
         "title" : "Chat App",
         "description": "A web application designed to function similar to Slack. Users are required to log in before accessing chat. The Application features a live chat, the ability to traverse different channels and toggle light and dark themes",
         "links":["https://github.com/CodeSurge97/Slack-Clone","https://slack-clone-63a7c.web.app"],
-        "image":""
+        "image":"https://res.cloudinary.com/ssurge/image/upload/v1628036604/slack2_t2ibkq.png"
     },
     {
         "title" : "Ecommerce App",

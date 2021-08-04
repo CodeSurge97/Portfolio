@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import CopyrightIcon from '@material-ui/icons/Copyright'
 
 function Footer() {
     return (
@@ -19,7 +20,7 @@ function Footer() {
                 </Facebook>
             </Links>
             <Copyright>
-                <Text>Copyright Serge Metellus</Text>
+                <Text>Copyright <CopyrightIcon/> Serge Metellus. All Rights Reserved</Text>
             </Copyright>
         </Container>
     )
@@ -34,7 +35,14 @@ const Container = styled.div`
     padding: 30px;
 `
 const Links = styled.div`
-
+    svg{
+        font-size: 1rem;
+    }
+    @media (min-width: 992px){
+        svg{
+            font-size: 1.5rem;
+        }
+    }
 `
 const GithubIcon = styled(GitHubIcon)`
     color: white;
@@ -42,6 +50,7 @@ const GithubIcon = styled(GitHubIcon)`
 `
 const LinkedinIcon = styled(LinkedInIcon)`
     color: white;
+    font-size: 0.60rem;
 `
 const Facebookicon = styled(FacebookIcon)`
     color: white;
@@ -57,7 +66,19 @@ const Facebook = styled.a`
 `
 const Copyright = styled.div`
     color: white;
+    svg{
+        font-size: 0.50rem;
+    }
+    @media (min-width: 992px){
+        svg{
+            font-size: 0.85rem;
+        }
+    }
 `
-const Text = styled.span`
 
+const Text = styled.span`
+    font-size: 0.65rem;
+    @media (min-width: 992px){
+        font-size: 1rem;
+    }
 `

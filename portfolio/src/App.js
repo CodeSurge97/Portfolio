@@ -1,4 +1,4 @@
-import React, {useState}  from 'react';
+import React, {useState, useEffect}  from 'react';
 import ReactDOM from "react-dom";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import { PageTransition } from "@steveeeie/react-page-transition";
@@ -23,12 +23,33 @@ function App() {
       <Link to="/about">About</Link>
     </>
   );
-  
+
   // const Home = props => Banner;
   
   // const Abouts = props => About;
-  
-
+  // window.onscroll = (e) => {
+  //   e.preventDefault()
+  //   if(window.scrollY >= 50){
+  //     setFace('bottom')
+  //   }
+  //   else 
+  //   {
+  //     setFace('front')
+  //   }
+  // }
+  const Click = () => {
+    setFace('bottom')
+  }
+  const Transition1 = () => {
+    return (
+        <div><Banner/></div>
+    )
+  }
+  const Transition2 = () => {
+    return (
+        <div onClick={() => {setFace('front')}}><About/></div>
+    )
+  }
   return (
     <div className="App">
      
@@ -50,14 +71,20 @@ function App() {
           );
         }}
       />
-      
-      </BrowserRouter> */}
+      <div onClick={() => {setFace('left')}} style={{position: "absolute", right: 0}}><About/></div>
+      </BrowserRouter> */} 
       <Nav/>
-      <Banner/>
-      <About></About>
+      <CubeTransition 
+        face={face}
+        frontPage={<Banner setFace={setFace}/>}
+        bottomPage={<About/>}
+        contentElevation={15}
+        />
+     
       <Work></Work>
       <Contact/>
       <Footer/>
+      
     </div>
   );
     

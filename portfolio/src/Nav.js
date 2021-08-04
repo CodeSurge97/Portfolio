@@ -40,7 +40,7 @@ function Nav(){
 }
 export default Nav;
 const Container = styled.nav`
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0);
     position: fixed; 
     display: flex;
     justify-content: flex-start;

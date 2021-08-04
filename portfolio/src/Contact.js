@@ -84,7 +84,7 @@ function Contact() {
 export default Contact;
 
 const Section = styled.section`
-    background-color: rgb(37, 37, 37);
+    background-color: rgb(47, 47, 47);
     color: white;
 `
 
@@ -108,13 +108,13 @@ const Form = styled.form`
     }
 `
 const FullName = styled.div`
---bs-gutter-x: 1.5rem;
---bs-gutter-y: 0;
-display: flex;
-flex-wrap: wrap;
-margin-top: calc(var(--bs-gutter-y) * -1);
-margin-right: calc(var(--bs-gutter-x)/ -2);
-margin-left: calc(var(--bs-gutter-x)/ -2);
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x)/ -2);
+    margin-left: calc(var(--bs-gutter-x)/ -2);
 `
 const Name = styled.div`
     padding-right: 10px;
