@@ -9,6 +9,10 @@
 ::before {
   box-sizing: border-box;
 }
+.fil0 {
+  fill: #0090ff;
+  fill-rule: nonzero;
+}
 /* .App-logo {
   height: 40vmin;
   pointer-events: none;

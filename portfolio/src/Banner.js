@@ -3,11 +3,11 @@ import styled from 'styled-components'
 import luca from './luca.jpg'
 import ArrowDownward from '@material-ui/icons/ArrowDropDown'
 
-function Banner({setFace}) {
+function Banner({setSide}) {
     return (
-        <Container>
+        <Container >
             <BannerImg>
-                <Icon onClick={() => {setFace('bottom')}}>
+                <Icon onClick={() => {setSide('bottom')}}>
                     <ArrowDownward/>
                 </Icon>
             </BannerImg>
@@ -21,6 +21,7 @@ const Container = styled.div`
     position: relative;
     background-color: rgba(0, 0, 0);
     height: 100%;
+    // width: 400px;
     overflow: hidden;
 `
 const BannerImg = styled.div`
@@ -28,16 +29,22 @@ const BannerImg = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.3;
+    height: 100%;
     display: block;
-    width: 100%;
-    min-height: 600px;
+    // width: 400px;
+    // min-height: 200px;
     background-image: url("${luca}");
 
 `
 const Icon = styled.div`
     position: absolute;
+    @media(min-width: 1400px){
+        top: 800px;
+        left: 950px;
+    }
     top: 200px;
-    left: 500px;
+    left: 100px;
     cursor: pointer;
-    color: white;
+    color: white; 
+    border: 1px solid lightgray;
 `

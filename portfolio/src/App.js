@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import { PageTransition } from "@steveeeie/react-page-transition";
 import {CubeTransition} from 'react-3d-cube-transition'
+import styled from 'styled-components'
 import 'react-3d-cube-transition/dist/index.css'
 import logo from './logo.svg';
 import './App.css';
@@ -12,10 +13,11 @@ import About from './About';
 import Work from './Work';
 import Footer from './Footer';
 import Contact from './Contact';
+import Prism from './Cube'
 
 function App() {
 
-  const [face, setFace] = useState('front');
+  const [face, setFace] = useState('left');
   
   const Links = () => (
     <>
@@ -42,12 +44,12 @@ function App() {
   }
   const Transition1 = () => {
     return (
-        <div><Banner/></div>
+        <div></div>
     )
   }
   const Transition2 = () => {
     return (
-        <div onClick={() => {setFace('front')}}><About/></div>
+        <div onClick={() => {setFace('left')}}></div>
     )
   }
   return (
@@ -74,12 +76,21 @@ function App() {
       <div onClick={() => {setFace('left')}} style={{position: "absolute", right: 0}}><About/></div>
       </BrowserRouter> */} 
       <Nav/>
-      <CubeTransition 
+      <Banner/>
+      <About/>
+      {/* <Cubetransition 
         face={face}
-        frontPage={<Banner setFace={setFace}/>}
-        bottomPage={<About/>}
-        contentElevation={15}
-        />
+        frontCSS={{height: '600px'}}
+        rightCSS={{height: '600px'}}
+        leftCSS={{height: '600px'}}
+        backCSS={{height: '600px'}}
+        topCSS={{height: '600px'}}
+        bottomCSS={{height: '600px'}}
+        topPage={<About setFace={setFace}/>}
+        leftPage={<Banner setFace={setFace}/>}
+        /> */}
+
+      
      
       <Work></Work>
       <Contact/>
@@ -91,3 +102,6 @@ function App() {
 }
 
 export default App;
+
+const Cubetransition = styled(CubeTransition)`
+`
