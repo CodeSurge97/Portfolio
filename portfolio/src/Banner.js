@@ -6,11 +6,16 @@ import ArrowDownward from '@material-ui/icons/ArrowDropDown'
 function Banner({setSide}) {
     return (
         <Container >
+            <BannerText>
+                    <Text>Hello, I'm Serge Metellus</Text>
+                    <SubText>Full-Stack Developer</SubText>
+            </BannerText>
             <BannerImg>
-                <Icon onClick={() => {setSide('bottom')}}>
+                <Icon>
                     <ArrowDownward/>
                 </Icon>
             </BannerImg>
+            
         </Container>
     )
 }
@@ -24,6 +29,7 @@ const Container = styled.div`
     // width: 400px;
     overflow: hidden;
 `
+
 const BannerImg = styled.div`
     background-position: center;
     background-repeat: no-repeat;
@@ -36,6 +42,25 @@ const BannerImg = styled.div`
     background-image: url("${luca}");
 
 `
+
+const BannerText = styled.div`
+    color: white;
+    top: 300px;
+    position: absolute;
+    @media(min-width: 1400px){
+        left: 700px;
+    }
+    
+`
+
+const Text = styled.h1`
+
+`
+
+const SubText =styled.h3`
+
+`
+
 const Icon = styled.div`
     position: absolute;
     @media(min-width: 1400px){
